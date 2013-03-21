@@ -1,19 +1,19 @@
 %h1 Listing invoices
 %table
   %tr
+    %th Number
     %th Type
     %th Branch
-    %th Number
     %th Client
     %th
     %th
     %th
   - @invoices.each do |invoice|
     %tr
-      %td= invoice.type
-      %td= invoice.branch_id
       %td= invoice.number
-      %td= invoice.client_id
+      %td= invoice.invoice_type
+      %td= invoice.branch.name
+      %td= invoice.client.name
       %td= link_to 'Show', invoice
       %td= link_to 'Edit', edit_invoice_path(invoice)
       %td= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' }
