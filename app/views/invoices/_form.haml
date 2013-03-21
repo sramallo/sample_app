@@ -19,5 +19,15 @@
     = f.label :client_id
     %br/
     = f.collection_select :client_id, @clients, :id, :name
+  .invoice_items
+    %h3 Item
+    = f.fields_for :invoice_items do |fi|
+      .field
+        = fi.label :price
+        = fi.number_field :price
+      .field
+        = fi.label :quantity
+        = fi.number_field :quantity
+
   .actions
     = f.submit

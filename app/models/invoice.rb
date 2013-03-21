@@ -4,6 +4,8 @@ class Invoice < ActiveRecord::Base
   belongs_to :branch
   belongs_to :client
 
+  has_many :invoice_items
+
   validates_associated  :branch, :client
   validates_presence_of :branch, :client
 
