@@ -1,6 +1,6 @@
 class InvoicesController < ApplicationController
 
-  before_filter :find_branches, only: [:new, :edit, :update]
+  before_filter :find_related_models, only: [:new, :edit, :update]
 
   # GET /invoices
   # GET /invoices.json
@@ -85,8 +85,9 @@ class InvoicesController < ApplicationController
   end
 
 
-  def find_branches
+  def find_related_models
     @branches = Branch.all
+    @clients = Client.all
   end
 
 end

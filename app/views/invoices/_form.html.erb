@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
+    <%= f.label :invoice_type %><br />
+    <%= f.select :invoice_type, Invoice.types %>
   </div>
   <div class="field">
     
@@ -21,12 +21,8 @@
     <%= f.collection_select :branch_id, @branches, :id, :name %>
   </div>
   <div class="field">
-    <%= f.label :number %><br />
-    <%= f.number_field :number %>
-  </div>
-  <div class="field">
     <%= f.label :client_id %><br />
-    <%= f.number_field :client_id %>
+    <%= f.collection_select :client_id, @clients, :id, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>

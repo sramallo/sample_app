@@ -1,7 +1,7 @@
 class CreateInvoices < ActiveRecord::Migration
   def change
     create_table :invoices do |t|
-      t.string :type
+      t.string :invoice_type
       t.integer :branch_id
       t.integer :number
       t.decimal :total, precision: 5, scale:  2

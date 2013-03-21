@@ -8,3 +8,5 @@
 
 Branch.create([{name: 'sucursal1'}, {name:'sucursal2'}])
 
+Branch.create([{name: 'Pepe'}, {name:'Juan'}])
+
