@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %b Type:
+  = @invoice.invoice_type
+%p
+  %b Branch:
+  = @invoice.branch.name
+%p
+  %b Number:
+  = @invoice.number
+%p
+  %b Client:
+  = @invoice.client.name
+= link_to 'Edit', edit_invoice_path(@invoice)
+|
+\#{link_to 'Back', invoices_path}
