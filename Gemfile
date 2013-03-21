@@ -9,6 +9,7 @@ gem 'better_errors'
 gem 'binding_of_caller'
 
 gem 'pry'
+gem 'activeadmin'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
