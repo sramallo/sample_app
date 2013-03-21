@@ -2,12 +2,12 @@
 
 <p>
   <b>Type:</b>
-  <%= @invoice.type %>
+  <%= @invoice.invoice_type %>
 </p>
 
 <p>
   <b>Branch:</b>
-  <%= @invoice.branch_id %>
+  <%= @invoice.branch.name %>
 </p>
 
 <p>
@@ -17,7 +17,7 @@
 
 <p>
   <b>Client:</b>
-  <%= @invoice.client_id %>
+  <%= @invoice.client.name %>
 </p>
 
 

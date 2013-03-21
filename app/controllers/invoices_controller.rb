@@ -1,6 +1,6 @@
 class InvoicesController < ApplicationController
 
-  before_filter :find_related_models, only: [:new, :edit, :update]
+  before_filter :find_related_models, only: [:new, :edit, :update, :create]
 
   # GET /invoices
   # GET /invoices.json
