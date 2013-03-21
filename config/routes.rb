@@ -1,5 +1,8 @@
 SampleApp::Application.routes.draw do
  
+  resources :invoices
+
+
   get "users/new"
 
   resources :tasks
