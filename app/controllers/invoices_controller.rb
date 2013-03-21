@@ -1,4 +1,7 @@
 class InvoicesController < ApplicationController
+
+  before_filter :find_branches, only: [:new, :edit, :update]
+
   # GET /invoices
   # GET /invoices.json
   def index
@@ -80,4 +83,10 @@ class InvoicesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def find_branches
+    @branches = Branch.all
+  end
+
 end

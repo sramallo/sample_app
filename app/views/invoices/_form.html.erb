@@ -16,8 +16,9 @@
     <%= f.text_field :type %>
   </div>
   <div class="field">
+    
     <%= f.label :branch_id %><br />
-    <%= f.number_field :branch_id %>
+    <%= f.collection_select :branch_id, @branches, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :number %><br />
